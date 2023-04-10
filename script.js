@@ -22,7 +22,7 @@ function addTask(newItem) {
     doneBtn.setAttribute('data-action', 'complete');
 
     let deleteButton = document.createElement('i');
-    deleteButton.className = 'fa-solid fa-trash-can';
+    deleteButton.className = 'fa-solid fa-piggy-bank';
     itemBtns.append(deleteButton);
     deleteButton.setAttribute('data-action', 'delete');
 
@@ -57,6 +57,18 @@ list.addEventListener('click', function (event) {
 function completeBtn(target) {
     target.closest('li').classList.toggle('done');
     localStorage.setItem('tasksLS', list.innerHTML)
+    let currentId = target.closest('li').id;
+    const index = tasks.findIndex(function (task) {
+        return task.id == currentId;
+    })
+
+    if (tasks[index].complete == false) {
+        tasks[index].complete = true;
+    } else {
+        tasks[index].complete = false
+    }
+
+
 }
 
 function removeTask(target) {

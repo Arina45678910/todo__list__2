@@ -10,7 +10,10 @@ body {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    padding: 20px;
+    background-image: url(img/dudko2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 ul {
@@ -24,7 +27,11 @@ ul>li {
 
 .container {
     max-width: 1070px;
+    height: 100px;
     margin: 0 auto;
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .header {
@@ -87,14 +94,23 @@ ul>li {
 
 
 /* Символ корзины */
-.fa-trash-can {}
+.fa-piggy-bank {
+    color: red;
+}
 
 /* Символ чекбокса */
 .fa-square-check {
     margin-right: 20px;
+    color: rgb(27, 211, 27);
 }
 
 /* Поведение элемента списка если добавлен класс .done */
 .item.done {
     text-decoration: line-through;
+}
+
+.fa-regular,
+.far {
+    color: rgb(95, 141, 27);
+    font-size: 18px;
 }
